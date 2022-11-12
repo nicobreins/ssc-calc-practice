@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <main>
+        <div class="testchoice_cont" id="testchoice">
+            <button class="testchoise" id="choice_add" value="+">+</button>
+            <button class="testchoise" id="choice_sub" value="-">-</button>
+            <button class="testchoise" id="choice_mult" value="*">×</button>
+            <button class="testchoise" id="choice_divi" value="/">÷</button>
+        </div>
+    
+        <div class="rangesel_cont" id="rangesel">
+            <button id="home1">Back</button>
+
+            <div>
+                <!-- <label for="firstnum">First num digit count</label> -->
+                <fieldset>
+                    <legend>First num range*</legend>
+                    <div class="inpgp">
+                        <!-- <label for="firstnum_rengestart">Min</label> -->
+                        <input type="number" id="firstnum_rengestart" placeholder="min" value="0">
+                        <label>to</label>
+                        <input type="number" id="firstnum_rangeend" placeholder="max" value="99">
+                    </div>
+                   
+                </fieldset>
+    
+                <fieldset>
+                    <legend>Second num range*</legend>
+                    <div class="inpgp">
+                        <!-- <label for="secondnum_rengestart">Min</label> -->
+                        <input type="number" id="secondnum_rengestart" placeholder="min" value="0">
+                        <label>to</label>
+                        <input type="number" id="secondnum_rangeend" placeholder="max" value="99">
+                    </div>
+                   
+                </fieldset>
+    
+                <p id="minmax-error"></p>
+    
+                <button id="start_game" class="btn">Start</button>
+            </div>
+        </div>
+    
+        <div class="gamearea" id="game">
+            <button id="home">Home</button>
+            <button id="chngrng">Change ranges</button>
+            <span id="counter"></span>
+            <p class="calctxt">
+                <span id="num1">10</span>
+                <span id="mark">+</span>
+                <span id="num2">10</span>
+                <span>=</span>
+            </p>
+    
+            <div>
+                <input type="number" id="answer">
+                <p id="ans"></p>
+                <button id="ans_check" class="btn" disabled>Check</button>
+                <button id="next_que" class="btn btn-outline" >Next</button>
+            </div>
+        </div>
+    </main>
+    
+<script src="index.js"></script>
+</body>
+</html>

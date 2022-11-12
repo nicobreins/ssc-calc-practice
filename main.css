@@ -1,0 +1,113 @@
+main{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.testchoice_cont{
+    display: grid;
+    width: 300px;
+    height: 300px;
+    grid-template-columns: 50% 50%;
+    /* grid-template-rows: 50% 50%; */
+    gap: .5em;
+    padding: .5em;
+}
+
+.testchoice_cont button{
+    background-color: #252525;
+    color: white;
+    font-size: 2em;
+}
+
+.testchoice_cont button:active{
+    background-color: rgb(45, 1, 39);
+}
+
+.rangesel_cont{
+    width: 300px;
+    /* height: 300px; */
+    padding: 1em;
+    display: none;
+
+}
+
+input{
+    border: none;
+    background-color: #d9d9d9;
+    padding: 1em;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+fieldset{
+    margin-top: 1em;
+}
+
+.inpgp{
+    display: flex;
+    align-items: center;
+    gap: .2em;
+}
+
+.inpgp label{
+    font-size: .8em;
+}
+
+.btn{
+    display: block;
+    padding: 1em;
+    background-color: #0DBA3E;
+    border: none;
+    margin-bottom: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:disabled{
+    background-color: #a1d6b0;
+}
+
+.btn-outline{
+    background-color: white !important;
+    color: #0DBA3E !important;
+    border: 1px solid #0DBA3E !important;
+}
+
+button:active{
+    background-color: #047023;
+}
+
+.btn-outline:active{
+    color: #047023 !important;
+    border: 1px solid #047023 !important;
+}
+
+.gamearea{
+    width: 300px;
+    padding: 1em;
+    display: none;
+
+}
+
+.gamearea p{
+    text-align: center;
+}
+
+.calctxt{
+    font-size: 1.3em;
+}
+
+
+#counter{
+    float: right;
+}
+
+#ans, #minmax-error{
+    font-size: .85em;
+}
