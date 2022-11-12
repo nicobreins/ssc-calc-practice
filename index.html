@@ -9,19 +9,32 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <header>
+        <img src="menu_FILL0_wght400_GRAD0_opsz48.svg" alt="" width="24px" height="24px"; style="padding: .25em;margin-right: .5em;">
+        <div class="head-center">
+            <img src="icon.png" alt="" width="30px" height="30px">
+            <h1>Calculation Booster</h1>
+        </div>
+        <button id="home">
+            <img src="home_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+        </button>
+    </header>
     <main>
         <div class="testchoice_cont" id="testchoice">
-            <button class="testchoise" id="choice_add" value="+">+</button>
-            <button class="testchoise" id="choice_sub" value="-">-</button>
-            <button class="testchoise" id="choice_mult" value="*">×</button>
-            <button class="testchoise" id="choice_divi" value="/">÷</button>
-            <button class="testchoise" id="choice_root" value="/" style="background-color: lightgrey;cursor: not-allowed;">√</button>
-            <button class="testchoise" id="choice_square" value="/" style="background-color: lightgrey;cursor: not-allowed;">x<sup>2</sup></button>
+            <p style="text-align: center;margin-top:0.3em">Select arithmetic operation</p>
+            <div class="testchoice_cont_in">
+                <button class="testchoise" id="choice_add" value="+">+</button>
+                <button class="testchoise" id="choice_sub" value="-">-</button>
+                <button class="testchoise" id="choice_mult" value="*">×</button>
+                <button class="testchoise" id="choice_divi" value="/">÷</button>
+                <button class="testchoise" id="choice_root" value="/" style="background-color: lightgrey;cursor: not-allowed;">√</button>
+                <button class="testchoise" id="choice_square" value="/" style="background-color: lightgrey;cursor: not-allowed;">x<sup>2</sup></button>
+            </div>
 
         </div>
     
         <div class="rangesel_cont" id="rangesel">
-            <button id="home1">Back</button>
+            <!-- <button id="home1">Home</button> -->
 
             <div>
                 <!-- <label for="firstnum">First num digit count</label> -->
@@ -54,7 +67,6 @@
         </div>
     
         <div class="gamearea" id="game">
-            <button id="home">Home</button>
             <button id="chngrng">Change ranges</button>
             <span id="counter"></span>
             <p class="calctxt">

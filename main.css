@@ -1,10 +1,64 @@
-main{
+body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    justify-content: center;
+    margin: 0;
+    /* background-color: #fdfdfd; */
 }
 
+header{
+    display: flex;
+    background-color: white;
+    border-bottom: 0.5px solid lightgray;
+    padding: .5em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.head-center{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1{
+    padding: .25em;
+    margin: 0;
+    font-size: 1.15em;
+}
+
+#home{
+    /* justify-self: flex-end; */
+    /* margin-left: auto; */
+    border: none;
+    background: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home img{
+    width: 26px;
+    height: 26px;
+}
+
+#home:active{
+    background-color: rgb(243, 242, 242);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+}
+
+
 .testchoice_cont{
+    align-self: center;
+}
+
+.testchoice_cont_in{
     display: grid;
     width: 300px;
     height: 450px;
@@ -12,21 +66,22 @@ main{
     /* grid-template-rows: 50% 50%; */
     gap: .5em;
     padding: .5em;
+    /* justify-self: center; */
 }
 
-.testchoice_cont button{
+.testchoice_cont_in button{
     background-color: #252525;
     color: white;
     font-size: 2em;
     border: none ;
 }
 
-.testchoice_cont button:active{
+.testchoice_cont_in button:active{
     background-color: rgb(45, 1, 39);
 }
 
 .rangesel_cont{
-    width: 300px;
+    width: 100%;
     /* height: 300px; */
     padding: 1em;
     display: none;
@@ -91,7 +146,7 @@ button:active{
 }
 
 .gamearea{
-    width: 300px;
+    width: 100%;
     padding: 1em;
     display: none;
 
@@ -103,6 +158,14 @@ button:active{
 
 .calctxt{
     font-size: 1.7em;
+}
+
+#chngrng{
+    background: none;
+    border-radius: 0px;
+    font-family: inherit;
+    border: 1px solid grey;
+    padding: .25em .75em ;
 }
 
 

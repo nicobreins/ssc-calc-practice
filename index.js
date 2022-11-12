@@ -91,7 +91,7 @@ const checkResult = () => {
         document.getElementById('answer').disabled = true;
         clearInterval(cancel);
     }else if(ansin !=''){
-        ansmsg.innerHTML = '<strong style="color:red"> Wrong answer </strong> | Correct answer is <strong>' + result.toFixed(2) + '</strong>' + ' <br> Time:'+ seconds + 's';
+        ansmsg.innerHTML = '<strong style="color:red"> Wrong answer </strong> | Correct answer is <strong>' + result.toFixed(2) + '</strong>' +' <br> Time:'+ seconds + 's';
         check.disabled = true;
         clearInterval(cancel);
         document.getElementById('answer').disabled = true;
@@ -142,16 +142,16 @@ markdivi.onclick = function (){
 
 
 document.getElementById('home').onclick = function(){
-    document.getElementById('testchoice').style.display = 'grid';
+    document.getElementById('testchoice').style.display = 'block';
     document.getElementById('rangesel').style.display = 'none';
     document.getElementById('game').style.display = 'none';
 }
 
-document.getElementById('home1').onclick = function(){
-    document.getElementById('testchoice').style.display = 'grid';
-    document.getElementById('rangesel').style.display = 'none';
-    document.getElementById('game').style.display = 'none';
-}
+// document.getElementById('home1').onclick = function(){
+//     document.getElementById('testchoice').style.display = 'block';
+//     document.getElementById('rangesel').style.display = 'none';
+//     document.getElementById('game').style.display = 'none';
+// }
 
 document.getElementById('chngrng').onclick = function(){
     document.getElementById('testchoice').style.display = 'none';
