@@ -67,8 +67,10 @@ let cancel;
 
 startbtn.onclick = function(){
     randomFeed();
-    seconds = 0;   
+    seconds = 0; 
+    clearInterval(cancel);
     cancel = setInterval(incrementSeconds, 1000);
+    document.getElementById('answer').disabled = false;
     
 }
 
@@ -84,13 +86,16 @@ const checkResult = () => {
     const ansmsg= document.getElementById('ans');
 
     if(result == ansin && ansin !=''){
-        ansmsg.innerHTML = '<strong style="color:#0DBA3E">Correct Answer</strong>'  +' <br> Time:'+ seconds + 's';
+        ansmsg.innerHTML = '<strong style="color:#0DBA3E">Correct answer</strong>'  +' <br> Time: '+ seconds + 's';
         check.disabled = true;
+        document.getElementById('answer').disabled = true;
         clearInterval(cancel);
     }else if(ansin !=''){
-        ansmsg.innerHTML = '<strong style="color:red"> Wrong Ans </strong> | Correct ans is ' + result.toFixed(2) +' <br> Time:'+ seconds + 's';
+        ansmsg.innerHTML = '<strong style="color:red"> Wrong answer </strong> | Correct answer is <strong>' + result.toFixed(2) + '</strong>' + ' <br> Time:'+ seconds + 's';
         check.disabled = true;
         clearInterval(cancel);
+        document.getElementById('answer').disabled = true;
+
     }else{
         ansmsg.innerHTML = 'Please add your answer';
     }
@@ -116,6 +121,7 @@ nextbtn.onclick = function(){
     // check.disabled = false;
     clearInterval(cancel);
     cancel = setInterval(incrementSeconds, 1000);
+    document.getElementById('answer').disabled = false;
 }
 
 markadd.onclick = function (){

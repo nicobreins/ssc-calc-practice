@@ -7,7 +7,7 @@ main{
 .testchoice_cont{
     display: grid;
     width: 300px;
-    height: 300px;
+    height: 450px;
     grid-template-columns: 50% 50%;
     /* grid-template-rows: 50% 50%; */
     gap: .5em;
@@ -18,6 +18,7 @@ main{
     background-color: #252525;
     color: white;
     font-size: 2em;
+    border: none ;
 }
 
 .testchoice_cont button:active{
@@ -43,6 +44,7 @@ input{
 
 fieldset{
     margin-top: 1em;
+    border: 1px solid;
 }
 
 .inpgp{
@@ -100,7 +102,7 @@ button:active{
 }
 
 .calctxt{
-    font-size: 1.3em;
+    font-size: 1.7em;
 }
 
 
