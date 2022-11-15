@@ -8,7 +8,6 @@ const changemark = (markbtn) => {
     document.getElementById('mark').value = markbtn.value;
     document.getElementById('testchoice').style.display = 'none';
     document.getElementById('rangesel').style.display = 'block';
-
 }
 
 
@@ -81,7 +80,7 @@ const checkResult = () => {
     const num2 = document.getElementById('num2').innerHTML;
     let ansin = document.getElementById('answer').value;
     let mark = document.getElementById('mark').value;
-    let result = eval(num1 + mark + num2);
+    let result = eval(num1 + mark + num2).toFixed(2);
 
     const ansmsg= document.getElementById('ans');
 
@@ -91,7 +90,7 @@ const checkResult = () => {
         document.getElementById('answer').disabled = true;
         clearInterval(cancel);
     }else if(ansin !=''){
-        ansmsg.innerHTML = '<strong style="color:red"> Wrong answer </strong> | Correct answer is <strong>' + result.toFixed(2) + '</strong>' +' <br> Time:'+ seconds + 's';
+        ansmsg.innerHTML = '<strong style="color:red"> Wrong answer </strong> | Correct answer is <strong>' + result + '</strong>' +' <br> Time:'+ seconds + 's';
         check.disabled = true;
         clearInterval(cancel);
         document.getElementById('answer').disabled = true;
@@ -158,3 +157,25 @@ document.getElementById('chngrng').onclick = function(){
     document.getElementById('rangesel').style.display = 'block';
     document.getElementById('game').style.display = 'none';
 }
+
+
+// const inputBox = document.getElementById('answer');
+
+// const virtualKeyboardSupported = "virtualKeyboard" in navigator;
+
+
+
+
+// inputBox.onfocus = function(){
+//     if(virtualKeyboardSupported){
+//         navigator.virtualKeyboard.overlaysContent = true;
+//         navigator.virtualKeyboard.show();
+//     }
+    
+// }
+
+// navigator.virtualKeyboard.addEventListener('geometrychange', (event) => {
+//     let { x, y, width, height } = event.target.boundingRect;
+//     console.log('Virtual keyboard geometry changed:', x, y, width, height);
+//     document.getElementById('ans').innerHTML = 'Virtual keyboard geometry changed:', x, y, width, height;
+//   });

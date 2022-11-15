@@ -21,14 +21,15 @@
     </header>
     <main>
         <div class="testchoice_cont" id="testchoice">
-            <p style="text-align: center;margin-top:0.3em">Select arithmetic operation</p>
+            <p style="text-align: center;">Select arithmetic operation</p>
             <div class="testchoice_cont_in">
                 <button class="testchoise" id="choice_add" value="+">+</button>
                 <button class="testchoise" id="choice_sub" value="-">-</button>
                 <button class="testchoise" id="choice_mult" value="*">×</button>
                 <button class="testchoise" id="choice_divi" value="/">÷</button>
-                <button class="testchoise" id="choice_root" value="/" style="background-color: lightgrey;cursor: not-allowed;">√</button>
-                <button class="testchoise" id="choice_square" value="/" style="background-color: lightgrey;cursor: not-allowed;">x<sup>2</sup></button>
+                <button class="testchoise" id="choice_mix" value="mix">+  -<br>× ÷</button>
+                <!-- <button class="testchoise" id="choice_root" value="/" style="background-color: lightgrey;cursor: not-allowed;">√</button> -->
+                <!-- <button class="testchoise" id="choice_square" value="/" style="background-color: lightgrey;cursor: not-allowed;">x<sup>2</sup></button> -->
             </div>
 
         </div>
@@ -76,11 +77,11 @@
                 <span>=</span>
             </p>
     
-            <div>
+            <div class="ans-inp-area">
                 <input type="number" id="answer">
                 <p id="ans"></p>
                 <button id="ans_check" class="btn" disabled>Check</button>
-                <button id="next_que" class="btn btn-outline" >Next</button>
+                <button id="next_que" class="btn btn-outline" style="margin-top:8em ;">Next</button>
             </div>
         </div>
     </main>

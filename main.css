@@ -55,17 +55,19 @@ main{
 
 
 .testchoice_cont{
-    align-self: center;
+    /* align-self: center; */
+    /* margin-top: 1em; */
 }
 
 .testchoice_cont_in{
     display: grid;
-    width: 300px;
+    width: 308px;
     height: 450px;
     grid-template-columns: 50% 50%;
-    /* grid-template-rows: 50% 50%; */
+    grid-template-rows: 33% 33% 33% ;
     gap: .5em;
     padding: .5em;
+    box-sizing: border-box;
     /* justify-self: center; */
 }
 
@@ -78,6 +80,12 @@ main{
 
 .testchoice_cont_in button:active{
     background-color: rgb(45, 1, 39);
+}
+
+#choice_mix{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .rangesel_cont{
@@ -98,7 +106,7 @@ input{
 }
 
 fieldset{
-    margin-top: 1em;
+    margin-bottom: 1em;
     border: 1px solid;
 }
 
