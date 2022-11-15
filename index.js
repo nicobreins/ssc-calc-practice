@@ -84,12 +84,12 @@ const checkResult = () => {
 
     const ansmsg= document.getElementById('ans');
 
-    if(result == ansin && ansin !=''){
+    if(result == parseFloat(ansin) && ansin!=''){
         ansmsg.innerHTML = '<strong style="color:#0DBA3E">Correct answer</strong>'  +' <br> Time: '+ seconds + 's';
         check.disabled = true;
         document.getElementById('answer').disabled = true;
         clearInterval(cancel);
-    }else if(ansin !=''){
+    }else if(result != parseFloat(ansin) && ansin !=''){
         ansmsg.innerHTML = '<strong style="color:red"> Wrong answer </strong> | Correct answer is <strong>' + result + '</strong>' +' <br> Time:'+ seconds + 's';
         check.disabled = true;
         clearInterval(cancel);
