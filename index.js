@@ -26,13 +26,14 @@ const changemark = (markbtn) => {
 const randomDigit = (max,min)=>{
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min); 
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 const randomMark = ()=>{
     let temprandommark2 = randomDigit(3,0)
     document.getElementById('mark').innerHTML = randommark[temprandommark2];
     document.getElementById('mark').value = randommarkvalue[temprandommark2];
+    console.log(temprandommark2);
     
 }
 
@@ -139,7 +140,6 @@ nextbtn.onclick = function(){
     randomFeed();
     if(document.getElementById('mark').classList.contains('mix')){
         randomMark();
-        console.log('yex')
     }
     seconds = 0;   
     // check.disabled = false;
