@@ -2,10 +2,21 @@ const markadd = document.getElementById('choice_add');
 const marksub = document.getElementById('choice_sub');
 const markmult = document.getElementById('choice_mult');
 const markdivi = document.getElementById('choice_divi');
+const markmis = document.getElementById('choice_mix');
 
-const changemark = (markbtn) => {
-    document.getElementById('mark').innerHTML = markbtn.innerHTML;
-    document.getElementById('mark').value = markbtn.value;
+const randommark = ['+','-','×','÷']
+const randommarkvalue = ['+','-','*','/']
+
+const changemark = (markbtn) => {   
+    if(markbtn == markmis){
+        document.getElementById('mark').innerHTML = randommark[randomDigit(3,0)];
+        document.getElementById('mark').value = randommarkvalue[randomDigit(3,0)];
+        document.getElementById('mark').classList.add('mix')
+    }else{
+        document.getElementById('mark').innerHTML = markbtn.innerHTML;
+        document.getElementById('mark').value = markbtn.value;
+    }
+
     document.getElementById('testchoice').style.display = 'none';
     document.getElementById('rangesel').style.display = 'block';
 }
@@ -16,6 +27,14 @@ const randomDigit = (max,min)=>{
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min); 
 }
+
+const randomMark = ()=>{
+    document.getElementById('mark').innerHTML = randommark[randomDigit(3,0)];
+    document.getElementById('mark').value = randommarkvalue[randomDigit(3,0)];
+    
+}
+
+
 
 const startbtn = document.getElementById('start_game');
 const nextbtn = document.getElementById('next_que');
@@ -116,6 +135,10 @@ check.onclick = function(){
 
 nextbtn.onclick = function(){
     randomFeed();
+    if(document.getElementById('mark').classList.contains('mix')){
+        randomMark();
+        console.log('yex')
+    }
     seconds = 0;   
     // check.disabled = false;
     clearInterval(cancel);
@@ -139,11 +162,16 @@ markdivi.onclick = function (){
     changemark(markdivi);
 }
 
+markmis.onclick = function (){
+    changemark(markmis);
+}
+
 
 document.getElementById('home').onclick = function(){
     document.getElementById('testchoice').style.display = 'block';
     document.getElementById('rangesel').style.display = 'none';
     document.getElementById('game').style.display = 'none';
+    document.getElementById('mark').classList.remove('mix')
 }
 
 // document.getElementById('home1').onclick = function(){
