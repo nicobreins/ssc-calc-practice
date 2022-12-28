@@ -9,8 +9,9 @@ const randommarkvalue = ['+','-','*','/']
 
 const changemark = (markbtn) => {   
     if(markbtn == markmis){
-        document.getElementById('mark').innerHTML = randommark[randomDigit(3,0)];
-        document.getElementById('mark').value = randommarkvalue[randomDigit(3,0)];
+        let temprandommark = randomDigit(3,0)
+        document.getElementById('mark').innerHTML = randommark[temprandommark];
+        document.getElementById('mark').value = randommarkvalue[temprandommark];
         document.getElementById('mark').classList.add('mix')
     }else{
         document.getElementById('mark').innerHTML = markbtn.innerHTML;
@@ -29,8 +30,9 @@ const randomDigit = (max,min)=>{
 }
 
 const randomMark = ()=>{
-    document.getElementById('mark').innerHTML = randommark[randomDigit(3,0)];
-    document.getElementById('mark').value = randommarkvalue[randomDigit(3,0)];
+    let temprandommark2 = randomDigit(3,0)
+    document.getElementById('mark').innerHTML = randommark[temprandommark2];
+    document.getElementById('mark').value = randommarkvalue[temprandommark2];
     
 }
 
