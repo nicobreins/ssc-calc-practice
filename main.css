@@ -1,7 +1,7 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background-image: url(/bg.jpg);
+    background-image: url(bg.jpg);
     background-size: cover;
     background-blend-mode: multiply;
     background-color: #666;
@@ -89,7 +89,7 @@ main{
     font-size:3em;
     border: none ;
     border-radius: 99px;
-    background-image: url(/btn-bg.png);
+    background-image: url(btn-bg.png);
     background-position: center;
     background-size: cover;
     background-color: transparent;
