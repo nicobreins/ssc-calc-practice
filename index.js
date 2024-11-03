@@ -112,7 +112,7 @@ const checkResult = () => {
         document.getElementById('answer').disabled = true;
         clearInterval(cancel);
     }else if(result != parseFloat(ansin) && ansin !=''){
-        ansmsg.innerHTML = '<strong style="color:red"> Wrong answer </strong> | Correct answer is <strong>' + result + '</strong>' +' <br> Time:'+ seconds + 's';
+        ansmsg.innerHTML = '<strong style="color:#ff2e2e"> Wrong answer </strong> | Correct answer is <strong>' + result + '</strong>' +' <br> Time:'+ seconds + 's';
         check.disabled = true;
         clearInterval(cancel);
         document.getElementById('answer').disabled = true;
